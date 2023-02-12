@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    --theme-color: #CFD8DC;
+    --theme-orange: #FF7043;
+    --theme-dark: #212121;
+    --font-family: 'Ubuntu', sans-serif;
+    --header-image: url("../img/woodgrain.jpg")
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--theme-dark);
+}
+
+header{
+    background-image: var(--header-image);
+    padding-bottom: 20px;
+}
+
+header nav{
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--theme-dark);
+}
+
+header nav div{
+    width: fit-content;
+    padding: 10px 10px 10px 50px;
+    background-color: var(--theme-color);
+    color: var(--theme-dark);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+header nav ul li{
+    border-bottom: 4px solid var(--theme-color);
+    cursor: pointer;
+}
+
+header nav ul li:hover{
+    border-bottom: 4px solid var(--theme-orange);
+}
+
+header nav ul li:hover a{
+    color: var(--theme-orange);
+}
+
+header nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+header > .subtitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-top: 100px;
+    
+}
+
+header > .subtitle > div{
+    width: fit-content;
+    padding: 20px;
+    background-color: var(--theme-color);
+    color: var(--theme-dark);
+    font-size: 1.6em;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row > div{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row > div:first-child{
+    text-align: right;
+    font-size: 2rem;
+}
+
+.row > div:last-child{
+    border-left: 2px solid var(--theme-dark);
+}
+
+.works{
+    padding: 20px;
+}
+
+.works img{
+    max-width: 100%;
+    border: 4px solid var(--theme-color);
+}
+
+.works div a{
+    text-decoration: none;
+    color: var(--theme-dark);
+    display: inline-block;
+    position: relative;
+}
+
+.works .main-work{
+    width: 100%;
+}
+
+.works .other-works{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.works .work-details{
+    background-color: var(--theme-color);
+    width: fit-content;
+    padding-inline: 10px;
+    font-size: .9rem;
+}
+
+.works .main-work .work-details{
+    position: absolute;
+    bottom: 30px;
+}
+
+.works .other-works .work-details{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contacts ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;  
+    flex-wrap: wrap; 
+    padding: 0; 
+}
+
+.contacts li{
+    border-bottom: 4px solid var(--theme-dark);
+}
+
+.contacts ul a{
+    color: var(--theme-dark);
+    text-decoration: none;
+}
+
+@media screen and (max-width:680px) {
+    header nav{
+        flex-direction: column;
+    }
+    
+    header nav ul{
+        flex-direction: column;
+    }
+
+    header > .subtitle{
+        justify-content: center;
+        margin-right: 0;
+        margin-top: 100px;
+    }
+
+    header > .subtitle > div{
+        font-size: 1rem;
+    }
+
+    .works .other-works{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .works .work-details{
+        font-size: .8em;
+    }
+
+    .row{
+        grid-template-columns: 1fr;
+    }
+
+    .row > div:first-child{
+        padding: 0;
+        text-align: left;
+        font-size: 1.5rem;
+        border-bottom: 2px solid var(--theme-dark);
+        margin-bottom: 10px;
+    }
+
+    .row > div:last-child{
+        border: none;
+        padding: 0;
+    }
+    
+    .contacts ul{
+        justify-content: space-around;
+    }
+
+}

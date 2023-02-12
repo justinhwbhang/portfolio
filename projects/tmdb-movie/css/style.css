@@ -1,0 +1,35 @@
+body{
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,0.37160801820728295) 0%, rgba(253,29,29,0.37160801820728295) 50%, rgba(252,176,69,0.2707676820728291) 100%);
+}
+
+.img-fluid{
+    max-height: 300px;
+}
+
+.mb-5{
+    margin-bottom: 50px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.favourites-card{
+    position: relative;
+}
+
+.favourites-delete{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.favourites-img{
+    margin-top:-20px;
+}
+
